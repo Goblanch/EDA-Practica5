@@ -25,7 +25,7 @@ void GestorTorneo::mostrarRanking() const {
 double GestorTorneo::calcularPorcentajeBaneados() const {
     int total = ranking.contarJugadores();
     if (total == 0) return 0.0;
-    int baneados = ranking.contarJugadores();
+    int baneados = ranking.contarBaneados();
 
     return (static_cast<double>(baneados) / total) * 100.0;
 }
