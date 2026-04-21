@@ -21,7 +21,7 @@ public:
 
     void insertarJugadorEnOrden(Jugador &jug) {
 
-        auto nuevo = std::make_shared<Nodo>(j);
+        auto nuevo = std::make_shared<Nodo>(jug);
 
         if (!cabeza || jug.getNickname() < cabeza->dato.getNickname()) {
             nuevo->sig = cabeza;
