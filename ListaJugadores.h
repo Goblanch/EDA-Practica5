@@ -61,7 +61,7 @@ public:
         }
     }
 
-    int contarJugadores() {
+    int contarJugadores() const {
 
         int contador = 0;
         auto auxiliar = cabeza;
@@ -73,7 +73,20 @@ public:
         return contador;
     }
 
-    bool estaVacia() {
+    int contarBaneados() const {
+        int contador = 0;
+        auto auxiliar = cabeza;
+        while (auxiliar) {
+            if (auxiliar->dato.getPuntuacion() < 0) {
+                contador++;
+            }
+            auxiliar = auxiliar->sig;
+        }
+
+        return contador;
+    }
+
+    bool estaVacia() const{
         return cabeza == nullptr;
     }
 };
